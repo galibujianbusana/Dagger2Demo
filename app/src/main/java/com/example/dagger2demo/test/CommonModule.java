@@ -6,13 +6,13 @@ import dagger.Provides;
 @Module
 public class CommonModule {
 
-    private IMainView view;
+    private MainView view;
 
-    public CommonModule(IMainView view) {
+    public CommonModule(MainView view) {
         this.view = view;
     }
 
-    @Provides public IMainView provideMainView(){
+    @Provides public MainView provideMainView(){
         return  this.view;
     }
 

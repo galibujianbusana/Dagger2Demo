@@ -1,22 +1,23 @@
 package com.example.dagger2demo.test;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.Toast;
 
 import javax.inject.Inject;
 
 public class MainPresenter {
 
-    IMainView view;
+    MainView view;
 
-    @Inject public MainPresenter(IMainView view) {
+    @Inject public MainPresenter(MainView view) {
         this.view = view;
     }
 
-    public void login(User user){
+    public void login(){
 
-        Context mContext = view.getContext();
-        Toast.makeText(mContext,"login......", Toast.LENGTH_SHORT).show();
+        view.log();
+        Log.d("TAG", "login: user ");
     }
 
 }

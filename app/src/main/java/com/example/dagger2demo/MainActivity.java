@@ -10,13 +10,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.dagger2demo.test.CommonModule;
 import com.example.dagger2demo.test.DaggerCommonComponent;
-import com.example.dagger2demo.test.IMainView;
 import com.example.dagger2demo.test.MainPresenter;
+import com.example.dagger2demo.test.MainView;
 import com.example.dagger2demo.test.User;
 
 import javax.inject.Inject;
 
-public class MainActivity extends AppCompatActivity implements IMainView {
+public class MainActivity extends AppCompatActivity  {
 
     private static final String TAG = "MainActivity";
 
@@ -29,20 +29,17 @@ public class MainActivity extends AppCompatActivity implements IMainView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        DaggerCommonComponent.builder().commonModule(new CommonModule(this)).build().inject(this);
         btn = findViewById(R.id.btn);
+        DaggerCommonComponent.builder().commonModule(new CommonModule(new MainView()))
+                .build().inject(this);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mainPresenter.login(new User("gxw","22"));
+                mainPresenter.login();
             }
         });
 
     }
 
-    @Override
-    public Context getContext() {
 
-        return this;
-    }
 }
