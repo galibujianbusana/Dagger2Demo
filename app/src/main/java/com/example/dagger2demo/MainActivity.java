@@ -5,7 +5,6 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.dagger2demo.test.DaggerStudentComponent;
 import com.example.dagger2demo.test.Student;
 
 import javax.inject.Inject;
@@ -23,16 +22,6 @@ public class MainActivity extends AppCompatActivity {
         if(student == null){
             Log.d(TAG, "onCreate: null");
         }
-        DaggerStudentComponent.builder().build().inject(this);
-
-
-
-
-
-
-
-
-
 
     }
 }

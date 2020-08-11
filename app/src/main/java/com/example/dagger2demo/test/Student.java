@@ -8,8 +8,19 @@ public class Student {
 
     private Type type;
 
-    @Inject public Student() {
+    @Inject public Student(Type type) {
 
+        this.type = type;
     }
 
+    public Type getType(){
+        return type;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "type=" + type +
+                '}';
+    }
 }

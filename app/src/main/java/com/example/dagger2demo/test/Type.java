@@ -4,9 +4,9 @@ import javax.inject.Inject;
 
 public class Type {
 
-    String name = "guo";
+    public String name = "guo";
 
-    String age = "18";
+    public String age = "18";
 
     @Inject public Type(String name, String age) {
         this.name = name;
@@ -14,4 +14,11 @@ public class Type {
     }
 
 
+    @Override
+    public String toString() {
+        return "Type{" +
+                "name='" + name + '\'' +
+                ", age='" + age + '\'' +
+                '}';
+    }
 }

@@ -7,5 +7,6 @@ import dagger.Component;
 @Component(modules = StuModule.class)
 public interface StudentComponent {
 
-    void inject(MainActivity activity);
+   // void inject(MainActivity activity);
+
 }
