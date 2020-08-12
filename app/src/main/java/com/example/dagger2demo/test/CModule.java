@@ -7,13 +7,13 @@ import dagger.Provides;
 
 @Module
 public class CModule {
-    @Named("gxw")
+    @ForGuo
     @Provides
     Test3 getGxw(){
         return new Test3("gxw");
     }
 
-    @Named("gali")
+    @ForGail
     @Provides
     Test3 getGali(){
         return  new Test3("gali");

@@ -8,6 +8,8 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.dagger2demo.test.DaggerCComponent;
+import com.example.dagger2demo.test.ForGail;
+import com.example.dagger2demo.test.ForGuo;
 import com.example.dagger2demo.test.Test3;
 
 import javax.inject.Inject;
@@ -21,11 +23,11 @@ public class MainActivity extends AppCompatActivity  {
     Button btn;
 
 
-    @Named("gxw")
+    @ForGail
     @Inject
     Test3 test3;
 
-    @Named("gali")
+    @ForGuo
     @Inject
     Test3 test3_2;
 
