@@ -3,15 +3,14 @@ package com.example.dagger2demo.test;
 import android.content.Context;
 
 import javax.inject.Inject;
-import javax.inject.Singleton;
 
-@Singleton
-public class Test {
+public class Test2 {
 
     private Context mContext;
 
-    @Inject
-    public Test(Context mContext) {
+
+    public Test2(Context mContext) {
         this.mContext = mContext;
     }
+
 }
