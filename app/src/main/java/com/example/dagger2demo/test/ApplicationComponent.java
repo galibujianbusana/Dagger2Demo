@@ -16,4 +16,6 @@ public interface ApplicationComponent {
 
     void inject(MainActivity activity);
 
+    LocationManager getLocationManager();
+
 }

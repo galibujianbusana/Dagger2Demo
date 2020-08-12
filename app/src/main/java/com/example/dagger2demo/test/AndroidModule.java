@@ -17,11 +17,13 @@ public class AndroidModule {
         this.application = application;
     }
 
+    @Singleton
     @Provides
     Context ApplicationContext(){
         return  application;
     }
 
+    @Singleton
     @Provides
     LocationManager provideLocationManager(){
         return (LocationManager) application.getSystemService(Context.LOCATION_SERVICE);
