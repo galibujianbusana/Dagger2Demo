@@ -1,18 +1,21 @@
 package com.example.dagger2demo.test;
 
-import android.location.LocationManager;
+import javax.inject.Named;
 
 import dagger.Module;
 import dagger.Provides;
 
 @Module
 public class CModule {
-
-
-    @PerActivity
+    @Named("gxw")
     @Provides
-    Test3 provideBody(LocationManager locationManager){
+    Test3 getGxw(){
+        return new Test3("gxw");
+    }
 
-        return new Test3(locationManager);
+    @Named("gali")
+    @Provides
+    Test3 getGali(){
+        return  new Test3("gali");
     }
 }

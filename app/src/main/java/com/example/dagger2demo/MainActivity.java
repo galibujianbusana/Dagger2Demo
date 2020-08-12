@@ -7,16 +7,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.dagger2demo.test.AndroidModule;
-import com.example.dagger2demo.test.CModule;
-import com.example.dagger2demo.test.DaggerApplicationComponent;
-import com.example.dagger2demo.test.DaggerMainActivityComponent;
-import com.example.dagger2demo.test.DemoApplication;
-import com.example.dagger2demo.test.Test;
-import com.example.dagger2demo.test.Test2;
+import com.example.dagger2demo.test.DaggerCComponent;
 import com.example.dagger2demo.test.Test3;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 
 public class MainActivity extends AppCompatActivity  {
@@ -25,11 +20,14 @@ public class MainActivity extends AppCompatActivity  {
 
     Button btn;
 
-    @Inject
-    Test3 test1;
 
+    @Named("gxw")
     @Inject
-    Test3 test2;
+    Test3 test3;
+
+    @Named("gali")
+    @Inject
+    Test3 test3_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,17 +39,11 @@ public class MainActivity extends AppCompatActivity  {
             public void onClick(View view) {
             }
         });
+        DaggerCComponent.builder().build().inject(this);
 
-        DaggerApplicationComponent.builder()
-                .androidModule(new AndroidModule((DemoApplication) getApplication()))
-                .build()
-                .inject(this);
 
-        DaggerMainActivityComponent.builder()
-                .applicationComponent(((DemoApplication) getApplication()).component())
-                .build().inject(this);
-        Log.d(TAG, "onCreate: test1 == null ?" + (test1 == null));
-        Log.d(TAG, "onCreate: test2 == test1" + (test1 == test2));
+
+        Log.d(TAG, "onCreate: " + test3.toString() +" - -" + test3_2.toString());
 
     }
 
