@@ -1,3 +1,4 @@
 1.  AndroidModule 类如果是有参构造函数，必须调用 androidModule() 传入参数
 2.  Singleton 注解在类顶部可以实现单例
 3.  dev1.3 实现简q单的自定义注解
+4.  dev1.4 @Name 使用
