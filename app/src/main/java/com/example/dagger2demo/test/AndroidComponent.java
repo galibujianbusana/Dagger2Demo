@@ -4,7 +4,8 @@ import com.example.dagger2demo.MainActivity;
 
 import dagger.Component;
 
-@Component(modules = CommonModule.class)
-public interface CommonComponent {
+@Component(modules = AndroidModule.class)
+public interface AndroidComponent {
+
     void inject(MainActivity activity);
 }
