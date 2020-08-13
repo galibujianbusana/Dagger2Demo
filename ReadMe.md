@@ -37,3 +37,8 @@
            }
     
     ```
+    
+6. page3.case1/case2 里面是 @dependencies 使用
+
+7. page4 @Subcomponent 使用
+

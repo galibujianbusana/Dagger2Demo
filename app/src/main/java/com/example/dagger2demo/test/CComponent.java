@@ -4,7 +4,7 @@ import com.example.dagger2demo.MainActivity;
 
 import dagger.Component;
 
-@Component(modules = CModule.class)
+@Component(modules = CModule.class )
 public interface  CComponent {
     void  inject(MainActivity activity);
 }

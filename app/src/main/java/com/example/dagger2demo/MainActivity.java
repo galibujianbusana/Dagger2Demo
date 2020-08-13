@@ -13,7 +13,6 @@ import com.example.dagger2demo.test.ForGuo;
 import com.example.dagger2demo.test.Test3;
 
 import javax.inject.Inject;
-import javax.inject.Named;
 
 
 public class MainActivity extends AppCompatActivity  {
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btn = findViewById(R.id.btn);
+       btn = findViewById(R.id.btn);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -3,19 +3,24 @@
     package="com.example.dagger2demo">
 
     <application
+        android:name=".page4.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".page4.MainPage4Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".page3.case1.Case1Activity">
+        </activity>
+        <activity android:name=".page2.BaseActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
